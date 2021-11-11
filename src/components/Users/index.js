@@ -1,7 +1,5 @@
 import {Component} from 'react'
 
-import Sidebar from '../Sidebar'
-import Topbar from '../Topbar'
 import UserDetailsCardView from '../UserDetailsCardview'
 import UserDetailsListView from '../UserDetailsListview'
 
@@ -43,7 +41,7 @@ class User extends Component {
     this.setState({searchInput: event.target.value}, this.getData)
   }
 
-  renderUsers = () => {
+  render() {
     const {usersData, searchInput, currentCardId, currentListId} = this.state
     return (
       <div className="users-container">
@@ -77,20 +75,6 @@ class User extends Component {
             />
           ))}
         </ul>
-      </div>
-    )
-  }
-
-  render() {
-    const {usersData} = this.state
-    console.log(usersData)
-    return (
-      <div className="user-bg">
-        <Sidebar activeTabId="USERS" />
-
-        <Topbar />
-        <p className="users-heading">Users</p>
-        {this.renderUsers()}
       </div>
     )
   }

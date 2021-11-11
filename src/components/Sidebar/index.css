@@ -1,33 +1,29 @@
 .navigation-section {
-  height: 989px;
-  width: 305px;
-  left: 28px;
-  top: 46px;
-  border-radius: 30px;
-  background: #ffffff;
   display: flex;
   flex-direction: column;
+  width: 305px;
+  height: 989px;
+  border-radius: 30px;
+  background-color: white;
   align-items: center;
-  margin: 10px;
+  padding: 30px;
 }
 .hrLine {
+  position: absolute;
+  width: 212.5px;
   height: 0px;
-  width: 211.5px;
-  left: 75px;
-  top: 152.5px;
-  border-radius: 0px;
-
+  left: 45px;
+  top: 132.5px;
   border: 1px solid #a1e0ff;
 }
 .LinkItem {
   text-decoration: none;
 }
 .websiteLogo {
-  height: 32px;
-  width: 106px;
-  left: 127px;
-  top: 97px;
-  border-radius: 0px;
+  left: 6.61%;
+  right: 87.86%;
+  top: 8.98%;
+  bottom: 88.06%;
 }
 .addUser-image {
   height: 20px;
@@ -61,7 +57,8 @@
 .AddUserTab {
   list-style: none;
   display: flex-start;
-  align-items: center;
+  flex-direction: row;
+  align-items: flex-start;
   padding: 10px;
   width: 225px;
   left: 68px;

@@ -10,3 +10,16 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+.row-container {
+  display: flex;
+  flex-direction: row;
+  padding: 46px 36px 45px 28px;
+  background: #e5e5e5;
+}
+
+.column-container {
+  display: flex;
+  flex-direction: column;
+  padding-left: 46px;
+}

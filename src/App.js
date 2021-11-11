@@ -1,17 +1,32 @@
-import {Route, Switch} from 'react-router-dom'
-
-import AddUser from './components/AddUser'
-import User from './components/Users'
-import Weather from './components/Weather'
-
 import './App.css'
 
-const App = () => (
-  <Switch>
-    <Route exact path="/add-user" component={AddUser} />
-    <Route exact path="/users" component={User} />
-    <Route exact path="/weather" component={Weather} />
-  </Switch>
-)
+import {Switch, Route} from 'react-router-dom'
+import Sidebar from './components/Sidebar'
+import Topbar from './components/Topbar'
+import Weather from './components/Weather'
+import AddUser from './components/AddUser'
+import Users from './components/Users'
+
+function App() {
+  return (
+    <div className="row-container">
+      <Switch>
+        <Sidebar />
+        <div className="column-container">
+          <Topbar />
+          <Route path="/addusers">
+            <AddUser />
+          </Route>
+          <Route path="/users">
+            <Users />
+          </Route>
+          <Route path="/weather">
+            <Weather />
+          </Route>
+        </div>
+      </Switch>
+    </div>
+  )
+}
 
 export default App

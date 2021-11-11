@@ -7,7 +7,7 @@ import logo from '../Images/Logo.png'
 
 import './index.css'
 
-const Sidebar = props => {
+function Sidebar(props) {
   const {activeTabId} = props
 
   const addUserClass =
@@ -22,24 +22,43 @@ const Sidebar = props => {
     <div className="navigation-section">
       <img className="websiteLogo" src={logo} alt="Basidia logo" />
       <hr className="hrLine" />
-      <Link className="LinkItem" to="/add-user">
+      <Link className="LinkItem" to="/addusers">
         <li className={addUserClass}>
-          <img className="addUser-image" src={adduser} alt="add user logo" />
-          <p className="AddUserTabText">Add User</p>
+          <img
+            id="adduser"
+            className="addUser-image"
+            src={adduser}
+            alt="add user logo"
+          />
+          <label htmlFor="adduser" className="AddUserTabText">
+            Add User
+          </label>
         </li>
       </Link>
-
       <Link className="LinkItem" to="/users">
         <li className={usersClass}>
-          <img className="users-image" src={users} alt="users-logo" />
-          <p className="usersTabText">Users</p>
+          <img
+            id="users"
+            className="users-image"
+            src={users}
+            alt="users-logo"
+          />
+          <label htmlFor="users" className="usersTabText">
+            Users
+          </label>
         </li>
       </Link>
-
       <Link className="LinkItem" to="/weather">
         <li className={weatherClass}>
-          <img className="weather-image" src={weather} alt="weather logo" />
-          <p className="weatherTabText">Weather </p>
+          <img
+            id="weather"
+            className="weather-image"
+            src={weather}
+            alt="weather logo"
+          />
+          <label htmlFor="weather" className="weatherTabText">
+            Weather{' '}
+          </label>
         </li>
       </Link>
     </div>
